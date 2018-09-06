@@ -1,0 +1,19 @@
+.errorContainer{
+	height: 200px;
+	width: 1000px;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+}
+.errorCode{
+	font-size: 117px;
+	font-family: FuturaMedium;
+}
+.errorMessage{
+	font-size: 25px;
+	font-family: FuturaMedium;
+}

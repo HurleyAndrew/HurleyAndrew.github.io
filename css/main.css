@@ -1,0 +1,106 @@
+@font-face {
+	font-family: FuturaBold;
+	src: url(../fonts/FuturaRound-Bold.ttf);
+}
+@font-face{
+	font-family: FuturaDemi;
+	src: url(../fonts/FuturaRound-Demi.ttf);
+}
+@font-face{
+	font-family: FuturaMedium;
+	src: url(../fonts/FuturaRound-Medium.ttf);
+}
+body{
+	box-sizing: border-box;
+	text-rendering: optimizeLegibility;
+	margin:0;
+	padding: 0;
+	/* background-image: linear-gradient(-45deg, #282828 0%, black 100%); */
+	background-color: #EFCA54;
+	font-family: "FuturaMedium", sans-serif;
+	color: #16181C;
+}
+a {
+  color: #16181C;
+  text-decoration: none;
+}
+
+
+::selection{
+	color: white;
+	background: #EFCA54;
+}
+.orangeBG{
+	background-color:#EFCA54;
+}
+.whiteInnerBG{
+	background-color: white;
+	height: 95vh;
+	width: 98vw;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+}
+.name_linksContainer{
+	position: absolute;
+	height: 200px;
+	width: 1000px;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+.classYear{
+	font-size: 50px;
+	font-family: FuturaBold;
+}
+.fullName{
+	font-size: 117px;
+	font-family: FuturaMedium;
+}
+.linksContainer{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.button{
+	margin-right: 46px;
+	height: 80px;
+	width: 195px;
+	border-radius: 38px;
+	border: #16181C solid 6px;
+	text-align: center;
+	font-size: 50px;
+	font-family: FuturaDemi;
+	line-height: 1.7;
+}
+.mePhoto{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.profileImage{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	height: 80vh;
+	width: 30vw;
+
+}
+.red:hover{
+	color: white;
+	background-color: #E07070;
+}
+.blue:hover{
+	color: white;
+	background-color: #72B5DB;
+}
+.yellow:hover{
+	color: white;
+	background-color: #E5E16C;
+}
