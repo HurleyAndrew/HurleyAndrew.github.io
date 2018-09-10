@@ -1,3 +1,4 @@
+/*adding custom font faces with the font-face attribute*/
 @font-face {
 	font-family: FuturaBold;
 	src: url(../fonts/FuturaRound-Bold.ttf);
@@ -10,6 +11,10 @@
 	font-family: FuturaMedium;
 	src: url(../fonts/FuturaRound-Medium.ttf);
 }
+/*set the box model of the browser to border box
+  set the browser renderer for applicable browsers to optimize the visuals for legibility of text
+  set the default font as Futura Medium with sans-serif as a fall back
+*/
 body{
 	box-sizing: border-box;
 	text-rendering: optimizeLegibility;
@@ -20,12 +25,13 @@ body{
 	font-family: "FuturaMedium", sans-serif;
 	color: #16181C;
 }
+/*set my own link styling*/
 a {
   color: #16181C;
   text-decoration: none;
 }
 
-
+/*set the text highlight color to better suit the aesthetic*/
 ::selection{
 	color: white;
 	background: #EFCA54;
@@ -33,6 +39,7 @@ a {
 .orangeBG{
 	background-color:#EFCA54;
 }
+/*set to vary width and height by the browser height and width so the white center stays consistant*/
 .whiteInnerBG{
 	background-color: white;
 	height: 95vh;
@@ -45,6 +52,7 @@ a {
 	left: 0;
 
 }
+
 .name_linksContainer{
 	position: absolute;
 	height: 200px;
@@ -63,6 +71,7 @@ a {
 	font-size: 117px;
 	font-family: FuturaMedium;
 }
+/*set the container to flex to any child is effected and set the direction to row so it goes left to right and wrapping as wrap so at smaller sizes the links wrap back around*/
 .linksContainer{
 	display: flex;
 	flex-direction: row;
@@ -92,6 +101,8 @@ a {
 	width: 30vw;
 
 }
+
+/*set seperate hover states for different colors*/
 .red:hover{
 	color: white;
 	background-color: #E07070;
