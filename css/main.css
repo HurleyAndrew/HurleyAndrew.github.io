@@ -12,8 +12,8 @@
 	src: url(../fonts/FuturaRound-Medium.ttf);
 }
 /*set the box model of the browser to border box
-  set the browser renderer for applicable browsers to optimize the visuals for legibility of text
-  set the default font as Futura Medium with sans-serif as a fall back
+set the browser renderer for applicable browsers to optimize the visuals for legibility of text
+set the default font as Futura Medium with sans-serif as a fall back
 */
 body{
 	box-sizing: border-box;
@@ -27,8 +27,8 @@ body{
 }
 /*set my own link styling*/
 a {
-  color: #16181C;
-  text-decoration: none;
+	color: #16181C;
+	text-decoration: none;
 }
 
 /*set the text highlight color to better suit the aesthetic*/
@@ -50,6 +50,7 @@ a {
 	right: 0;
 	bottom: 0;
 	left: 0;
+	z-index: -9;
 
 }
 
@@ -87,6 +88,7 @@ a {
 	font-size: 50px;
 	font-family: FuturaDemi;
 	line-height: 1.7;
+	background-color: white;
 }
 .mePhoto{
 	position: absolute;
@@ -97,8 +99,11 @@ a {
 	position: absolute;
 	right: 0;
 	bottom: 0;
-	height: 80vh;
-	width: 30vw;
+	/* height: 80vh;
+	width: 30vw; */
+	height: calc(672*.9px);
+	width: calc(504*.9px);
+	z-index: -8;
 
 }
 
@@ -114,4 +119,41 @@ a {
 .yellow:hover{
 	color: white;
 	background-color: #E5E16C;
+}
+
+.linksContainer{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	height: 100%;
+}
+.listColumn{
+	margin: auto;
+
+}
+.columnName{
+	font-size: 64px;
+	font-family: FuturaMedium;
+	margin-bottom:70px;
+}
+.listItem{
+	font-size: 32px;
+	margin-bottom: 32px;
+	font-family: FuturaMedium;
+	color: #EA5757;
+}
+.arrowLeft{
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	opacity: .75;
+}
+.toHome{
+	display: inline-block;
+	font-family: FuturaMedium;
+	opacity: .75;
+	position: absolute;
+	left: 88px;
+	bottom: 70px;
+	font-size: 32px;
 }
