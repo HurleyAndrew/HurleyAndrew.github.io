@@ -125,6 +125,12 @@ a {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	/* height: 100%; */
+}
+.projectsContainer{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 	height: 100%;
 }
 .listColumn{
