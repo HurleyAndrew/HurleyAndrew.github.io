@@ -129,6 +129,8 @@ a {
 }
 .listColumn{
 	margin: auto;
+	display: flex;
+	flex-direction: column;
 
 }
 .columnName{
