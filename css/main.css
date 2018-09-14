@@ -125,7 +125,6 @@ a {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	/* height: 100%; */
 }
 .projectsContainer{
 	display: flex;
@@ -137,7 +136,6 @@ a {
 	margin: auto;
 	display: flex;
 	flex-direction: column;
-
 }
 .columnName{
 	font-size: 64px;
