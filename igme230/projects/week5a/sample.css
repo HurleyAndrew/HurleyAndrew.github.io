@@ -1,0 +1,53 @@
+* {
+	box-sizing: border-box;
+}
+
+header, article, aside {
+	width:100%;
+}
+
+header{
+	background-color:#e5e5e5;
+	padding:8px;
+}
+
+h1, h2, nav{
+	text-align: center;
+}
+
+nav{
+	overflow:auto;
+}
+
+img{
+	max-width: 100%;
+}
+
+h3, nav a{
+	background-color:#e5e5e5;
+	padding:8px;
+	margin-top:7px;
+	width: 100%;
+	display: block;
+}
+
+aside{
+	padding:15px;
+	margin-top:7px;
+	background-color:#e5e5e5;
+}
+
+@media screen and (min-width: 620px) {
+
+	aside, nav{
+		float: left;
+		width: 20%;
+	}
+
+	article{
+		float:left;
+		padding:0 20px;
+		width: 60%;
+	}
+
+}
