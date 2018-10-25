@@ -140,11 +140,11 @@ a {
 .columnName{
 	font-size: 64px;
 	font-family: FuturaMedium;
-	margin-bottom:70px;
+	margin-bottom:30px;
 }
 .listItem{
-	font-size: 32px;
-	margin-bottom: 32px;
+	font-size: 24px;
+	margin-bottom: 16px;
 	font-family: FuturaMedium;
 	color: #EA5757;
 }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Week 9 Homework</title>
+	<style>
+	@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i');
+	html { font-family: Lato; font-size: 16px; }
+	main { max-width: 800px; margin: 0 auto; border: 1px dotted black; padding: 0 10px;} h1 { font-weight: 900;}
+	</style>
+
+</head>
+
+<body>
+	<main>
+		<h1>My Favorites</h1>
+		<h2>My Favorite Colors</h2>
+
+		<ol id="colorsList">
+
+		</ol>
+
+		<h2>My Favorite Foods</h2>
+
+		<ol id="foodsList">
+
+		</ol>
+
+	</main>
+
+	<script>
+	"use strict";
+	let colors = ["red","blue","green"]; // add some colors
+	let foods = ["apples","blueberries","grapes"]; // add some foods
+	function createList(listElement,array){
+		for (var i = 0; i < array.length; i++) {
+			//generate list item element
+			let item = document.createElement("li");
+			//set text for item
+			let textNode = document.createTextNode(array[i]);
+			//add text to item
+			item.appendChild(textNode);
+			//select list
+			let target = document.querySelector("#" + listElement );
+			//add item to list
+			target.appendChild(item);
+
+		}
+	}
+
+	createList("colorsList", colors);
+	createList("foodsList", foods);
+
+	</script>
+
+</body>
+
+</html>
