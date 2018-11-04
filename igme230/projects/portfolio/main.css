@@ -264,7 +264,7 @@ a:active{
 	margin-left: 0;
 	margin-right: 56px;
 }
-.videoImage{
+.projectImage{
 	display: inline-block;
 	background-color: black;
 	width:648px;
@@ -272,13 +272,11 @@ a:active{
 	margin-right: 20px;
 	object-fit: cover;
 }
-.videoTitle{
-
+.projectTitle{
 	font-size: 52px;
 	font-weight: bold;
-
 }
-.videoPara{
+.projectPara{
 	width: 440px;
 	font-size: 20px;
 	font-weight: normal;
@@ -298,7 +296,7 @@ a:active{
 	margin-right: 10px;
 }
 .profile_pic{
-	margin-left:200px;
+	/* margin-left:200px; */
 	display: flex;
 
 }
@@ -314,37 +312,4 @@ a:active{
 	justify-content: space-between;
 	flex-wrap: wrap;
 
-}
-/* More work and back to top styles */
-
-.moreworkCont{
-	font-size: 24px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-.moreworkText{
-	font-weight: bold;
-}
-.moreworkLink{
-	margin-top: 5px;
-	font-weight: normal;
-	opacity: .75;
-}
-.backtotopCont{
-	margin-top: 80px;
-	margin-bottom: 80px;
-	display: flex;
-	/* justify-content: center; */
-	align-items: center;
-	flex-direction: column;
-}
-
-.topArrow{
-	width: 20px;
-}
-.topText{
-	font-size: 13px;
-	font-weight: bold;
-	text-transform: uppercase;
 }
