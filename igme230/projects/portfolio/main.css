@@ -1,10 +1,10 @@
 
 /* light regular medium */
 @font-face {
-  font-family: 'MyWebFont';
-  src: url('TTCommons-Light.woff') format('woff'),
-  url('TTCommons-Medium.woff') format('woff'),
-  url('TTCommons-Regular.woff') format('woff');
+	font-family: 'MyWebFont';
+	src: url('TTCommons-Light.woff') format('woff'),
+	url('TTCommons-Medium.woff') format('woff'),
+	url('TTCommons-Regular.woff') format('woff');
 }
 *{
 	scroll-behavior: smooth;
@@ -312,4 +312,40 @@ a:active{
 	justify-content: space-between;
 	flex-wrap: wrap;
 
+}
+
+
+.projectContent{
+	margin-top: 100px;
+	display: flex;
+
+	flex-direction: column;
+	/* justify-content: center; */
+}
+.projectSectionHead{
+	font-weight: bold;
+	/* align-self: center; */
+	font-size: 32px;
+	margin-top: 100px;
+	margin-bottom: 10px;
+}
+.projectSectionPhoto{
+	align-self: center;
+	margin-top: 20px;
+
+}
+.projectSectionPara{
+	margin-top: 50px;
+	align-self: center;
+	width: 50%;
+	font-size: 18px;
+}
+.projectVideo{
+	width: 70%;
+	/* height: 30vw; */
+	align-self: center;
+}
+.paraFix{
+	margin-top:-50px;
+	margin-bottom: 100px;
 }
