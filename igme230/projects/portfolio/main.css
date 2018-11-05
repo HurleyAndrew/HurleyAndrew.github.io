@@ -454,7 +454,14 @@ a:active{
 
 }
 @media (max-width: 700px){
-
+	.desc{
+		margin-left:10px;
+		margin-right:0;
+	}
+	.photo{
+		width: 300px;
+		height: 300px;
+	}
 }
 @media (max-width: 500px) {
 	.nav-icon{
