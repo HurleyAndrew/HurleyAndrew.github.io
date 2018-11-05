@@ -353,6 +353,7 @@ a:active{
 	font-weight: bold;
 	font-size: 24px;
 	line-height: 62px;
+	margin-bottom: 100px;
 }
 .resumeDownload:hover{
 	transition: .2s;
@@ -367,20 +368,69 @@ a:active{
 .jobTitle{
 	color: #FF2CE8;
 	margin-bottom: 16px;
+	font-size: 24px;
+	font-weight: bold;
 }
 .jobHead{
 	color: black;
 	margin-bottom: 8px;
+	font-size: 20px;
+	font-weight: bold;
 }
 .jobSubHead{
 	color: black;
 	opacity: .75;
 	margin-bottom: 12px;
+	font-size: 20px;
 }
 .jobPara{
 	color: black;
 	opacity: .5;
 	margin-bottom: 25px;
+	font-size: 20px;
+	width: 50%;
 }
 
-/*  16 8 12*/
+
+.resumeContainer{
+	justify-content: center;
+	margin-top: 100px;
+	display: flex;
+	flex-direction: row;
+}
+.columnLeft{
+	width: 800px;
+}
+.columnRight{
+	width: 400px;
+}
+
+
+/* Media Queries */
+/* Printing */
+@media print {
+
+	.icon-nav{
+		display: none;
+	}
+	.pageTitle{
+		display: none;
+	}
+	.resumeDownload{
+		display: none;
+	}
+	.jobPara{
+		width: 60%;
+	}
+}
+
+/* Resume */
+@media (max-width: 950px) {
+    .resumeContainer{
+		flex-direction: column !important;
+	}
+
+	.resumeQueryMargin{
+		margin-top: 50px;
+	}
+}
