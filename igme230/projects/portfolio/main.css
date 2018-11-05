@@ -402,9 +402,47 @@ a:active{
 	width: 800px;
 }
 .columnRight{
-	width: 400px;
+	width: 460px;
 }
-
+/* Mobile Nav Styling */
+.mobileNavContainer{
+	display: none;
+	position: fixed;
+	z-index: 99;
+	height: 60px;
+	width: 100%;
+	background-color: white;
+	top: 0;
+}
+.menuButton{
+	height: 40px;
+	width: 40px;
+	margin: 15px;
+	margin-top: 20px;
+	background-image: url("assets/mobilenav.svg");
+	background-repeat: no-repeat;
+	float: right;
+	/* background-color: white; */
+}
+.mobileNavMenu{
+	display: none;
+	position: relative;
+	margin-top: 50px;
+	margin-left: -75px;
+	padding: 5px;
+	height: 120px;
+	width: 100px;
+	text-align: center;
+}
+.mobileNavItem{
+	background-color: white;
+	line-height: 30px;
+	color:black;
+	font-size: 18px;
+	margin-top: 15px;
+	font-weight: bold;
+	border: solid black 3px;
+}
 
 /* Media Queries */
 /* Printing */
@@ -425,22 +463,93 @@ a:active{
 }
 
 /* Resume */
-@media (max-width: 950px) {
-    .resumeContainer{
+@media  (min-width:500px) and (max-width: 950px) {
+	.resumeContainer{
+		flex-direction: column !important;
+	}
+	.resumeQueryMargin{
+		margin-top: 50px;
+	}
+	.projectContainer{
+		flex-direction: column;
+	}
+	.textContainer{
+		margin-top: 25px;
+	}
+
+}
+@media (max-width: 600px) {
+	.nav-icon{
+		width: 0;
+	}
+
+
+}
+@media (max-width: 500px) {
+	.nav-icon{
+		width: 0;
+	}
+	.resumeContainer{
 		flex-direction: column !important;
 	}
 
 	.resumeQueryMargin{
 		margin-top: 50px;
+	}
+
+	.jobTitle{
+		font-size: 24px;
+	}
+	.jobHead{
+		font-size: 20px;
+		width: 300px;
+	}
+	.jobSubHead{
+		font-size: 20px;
+	}
+	.jobPara{
+		font-size: 20px;
+	}
+	.columnLeft{
+		width: 700px;
+	}
+	.columnRight{
+		width: 700px;
+	}
+	.mobileNavContainer{
+		display: block;
+	}
+	.iconNav{
+		display: none;
+	}
+	.margins {
+		width: calc(100% - 20px);
+		padding: 0 20px;
 	}
 }
+@media(max-width: 560px) {
 
-@media (max-width: 450px) {
-    .resumeContainer{
-		flex-direction: column !important;
+	.projectContainer{
+		flex-direction: column;
+	}
+	.textContainer{
+		margin-top: 25px;
+		margin-left: 0px;
+	}
+	.projectTitle{
+		font-size: 38px;
 	}
 
-	.resumeQueryMargin{
-		margin-top: 50px;
+	.legible{
+		width: 350px;
+		font-size: 16px;
+	}
+}
+@media(max-width:1100px){
+	.projectContainer{
+		flex-direction: column;
+	}
+	.textContainer{
+		margin-top: 25px;
 	}
 }
