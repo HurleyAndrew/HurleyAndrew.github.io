@@ -407,6 +407,10 @@ a:active{
 
 /* Media Queries */
 /* Printing */
+@page {
+  size: A4;
+  margin: 0;
+}
 @media print {
 
 	.icon-nav{
