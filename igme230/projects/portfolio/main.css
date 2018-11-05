@@ -1,11 +1,12 @@
 
-/* light regular medium */
+/* font face to import my own fonts not provided by a cdn*/
 @font-face {
 	font-family: 'MyWebFont';
 	src: url('TTCommons-Light.woff') format('woff'),
 	url('TTCommons-Medium.woff') format('woff'),
 	url('TTCommons-Regular.woff') format('woff');
 }
+/*selecting everything and applying smoothing and text optimization*/
 *{
 	scroll-behavior: smooth;
 	text-rendering: optimizeLegibility;
@@ -61,6 +62,7 @@ a:active{
 .over-video {
 	position: absolute;
 	height: 100%;
+	/*calc to get browser width on the fly and adjust by it*/
 	width: calc(100% - 200px);
 	padding: 0 100px;
 	display: flex;
@@ -73,7 +75,6 @@ a:active{
 .icon-nav {
 	display: flex;
 	justify-content: space-between;
-
 	padding: 20px 0;
 }
 
@@ -101,30 +102,6 @@ a:active{
 	opacity: .75;
 }
 
-.dropDownContent{
-	display: none;
-	position: absolute;
-	min-width: 200px;
-	z-index: 1;
-}
-.dropDown{
-	position: relative;
-	display: flex;
-	justify-content: center;
-}
-
-.work_items{
-
-	display: block;
-	cursor: pointer;
-	margin-top: 8px;
-	font-size: 16px;
-	opacity: .75;
-	text-transform: uppercase;
-}
-.work_items:hover{
-	opacity: 1;
-}
 
 /* End Navigation */
 
@@ -144,9 +121,7 @@ a:active{
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-
 	height: 50px;
-
 	padding: 15px;
 }
 
@@ -197,9 +172,6 @@ a:active{
 
 .link-about {
 	opacity: 1;
-
-	/*width: 230px;
-	padding-left: 250px; */
 }
 .link-about-title{
 	font-weight: bold;
@@ -209,8 +181,6 @@ a:active{
 	padding-left: 20px;
 	width: 6px;
 }
-
-
 
 .whiteBG{
 	background-color: white;
@@ -244,21 +214,14 @@ a:active{
 .projectContainer:hover{
 	cursor: pointer;
 }
-.videoContainer{
-	margin-top: 56px;
-	background-color: pink;
-	height: 398px;
-}
+
 .textContainer{
 	position: relative;
 	display: inline-block;
 	margin-left: 56px;
 }
 
-.otherWayMargin{
-	margin-left: 0;
-	margin-right: 56px;
-}
+
 .projectImage{
 	display: inline-block;
 	background-color: black;
@@ -286,12 +249,8 @@ a:active{
 	margin-left: 10px;
 	margin-bottom: 7px;
 }
-.linkArrowReverse{
-	margin-left: 0px;
-	margin-right: 10px;
-}
+
 .profile_pic{
-	/* margin-left:200px; */
 	display: flex;
 
 }
@@ -313,9 +272,7 @@ a:active{
 .projectContent{
 	margin-top: 100px;
 	display: flex;
-
 	flex-direction: column;
-	/* justify-content: center; */
 }
 .projectSectionHead{
 	font-weight: bold;
