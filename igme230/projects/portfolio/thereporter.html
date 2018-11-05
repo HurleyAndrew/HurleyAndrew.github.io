@@ -11,48 +11,27 @@
 	<link rel="stylesheet" href="main.css">
 	<title>The Reporter </title>
 	<link rel="icon" type="image/jpg" href="favicon.jpg">
+	<script type="text/javascript" src="mobile.js"></script>
 </head>
 <body class="whiteBG ">
-	<script>
 
-	function hidenav(){
-		document.querySelectorAll(".mobileNavMenu")[0].style.display = 'none';
-	}
-	function unhidenav() {
-		if (document.querySelectorAll(".mobileNavMenu")[0].style.display === 'none') {
-			document.querySelectorAll(".mobileNavMenu")[0].style.display = 'block';
-			/*console.log("now showing")*/
-		}
-		else {
-			document.querySelectorAll(".mobileNavMenu")[0].style.display = 'none';
-			/*console.log("now hiding")*/
-		}
-	}
-	document.addEventListener('DOMContentLoaded', function () {
-		document.querySelectorAll(".menuButton")[0].addEventListener("click", unhidenav );
-		document.querySelectorAll(".mobileNavItem")[0].addEventListener("click", hidenav );
-		document.querySelectorAll(".mobileNavMenu")[0].style.display = 'none';
-	});
-
-
-	</script>
 	<div class="mobileNavContainer">
 		<div class="menuButton">
 			<div class="mobileNavMenu">
 				<a href = "index.html">
-				<div class="mobileNavItem">
-					Home
-				</div>
+					<div class="mobileNavItem">
+						Home
+					</div>
 				</a>
 				<a href = "projects.html">
-				<div class="mobileNavItem">
-					Projects
-				</div>
+					<div class="mobileNavItem">
+						Projects
+					</div>
 				</a>
 				<a href = "resume.html">
-				<div class="mobileNavItem">
-					Resume
-				</div>
+					<div class="mobileNavItem">
+						Resume
+					</div>
 				</a>
 			</div>
 		</div>
