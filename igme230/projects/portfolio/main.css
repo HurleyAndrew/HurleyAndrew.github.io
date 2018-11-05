@@ -444,6 +444,10 @@ a:active{
 	border: solid black 3px;
 }
 
+.dmvImage{
+	width: 100%;
+}
+
 /* Media Queries */
 /* Printing */
 @media print {
@@ -544,6 +548,10 @@ a:active{
 		width: 350px;
 		font-size: 16px;
 	}
+	.projectSectionPara{
+		width: 90% !important;
+	}
+
 }
 @media(max-width:1100px){
 	.projectContainer{
@@ -551,5 +559,19 @@ a:active{
 	}
 	.textContainer{
 		margin-top: 25px;
+	}
+	.margins {
+		width: calc(100% - 20px);
+		padding: 0 20px;
+	}
+	.projectSectionPara{
+		width: 60%;
+	}
+
+}
+
+@media(max-width:1400px){
+	.projectVideo{
+		width: 100%;
 	}
 }
