@@ -434,3 +434,13 @@ a:active{
 		margin-top: 50px;
 	}
 }
+
+@media (max-width: 450px) {
+    .resumeContainer{
+		flex-direction: column !important;
+	}
+
+	.resumeQueryMargin{
+		margin-top: 50px;
+	}
+}
