@@ -486,13 +486,24 @@ a:active{
 	.nav-icon{
 		width: 0;
 	}
+	.over-video{
+		width: 100%;
+		padding: 0 50px;
+	}
+	.icon-nav{
+		left: 0;
+		justify-content: center;
+	}
 
+}
+@media (max-width: 700px){
 
 }
 @media (max-width: 500px) {
 	.nav-icon{
 		width: 0;
 	}
+
 	.resumeContainer{
 		flex-direction: column !important;
 	}
@@ -551,6 +562,9 @@ a:active{
 	.projectSectionPara{
 		width: 90% !important;
 	}
+	.me{
+		width:100%;
+	}
 
 }
 @media(max-width:1100px){
@@ -574,4 +588,15 @@ a:active{
 	.projectVideo{
 		width: 100%;
 	}
+}
+
+@media(max-width: 750px) {
+
+	.me-title{
+		font-size: 40px;
+	}
+	.me-desc{
+		font-size: 30px;
+	}
+
 }
