@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery 1</title>
+	<script
+	src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous"></script>
+</head>
+<style>
+	#navpanel {
+		background-color:pink;
+		width:200px;
+		height:200px;
+	}
+</style>
+<body>
+	<button type="button" id="show">Show</button>
+	<button type="button" id="hide">hide</button>
+	<div id="navpanel">
+		<ul>
+			<li>
+				Link 1
+			</li>
+			<li>
+				Link 2
+			</li>
+			<li>
+				Link 3
+			</li>
+		</ul>
+	</div>
+	<script>
+		$("#show").click(function(){
+			$("#navpanel").show(1500);
+		});
+
+		$("#hide").click(function(){
+			$("#navpanel").hide(1500);
+		});
+	</script>
+</body>
+</html>
