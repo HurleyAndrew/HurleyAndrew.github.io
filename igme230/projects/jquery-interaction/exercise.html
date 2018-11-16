@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Exercise</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="jquery.slidereveal.min.js"></script>
+	<link href="main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body id="top">
+
+	<div class="navContainer" id="navpanel">
+		<div id="navmenu">
+			<a href="#page_1"><div class="navItem">Option One</div></a>
+			<a href="#page_2"><div class="navItem">Option Two</div></a>
+			<a href="#page_3"><div class="navItem">Option Three</div></a>
+		</div>
+		<div id="navtoggle"><span id="open">+</span><span id="close">-</span></div>
+	</div>
+	<div class="categoryContainer">
+		<div class="categoryHeader" id="page_1">
+			<div class="header">
+				<span>Option One</span>
+			</div>
+			<div class="headerContent">
+
+			</div>
+		</div>
+
+		<div class="categoryHeader" id="page_2">
+			<div class="header">
+				<span>Option Two</span>
+			</div>
+			<div class="headerContent">
+
+			</div>
+		</div>
+
+		<div class="categoryHeader" id="page_3">
+			<div class="header">
+				<span>Option Three</span>
+			</div>
+			<div class="headerContent">
+
+			</div>
+		</div>
+	</div>
+	<div class="backToTopContainer">
+		<div class="backToTop"><a href="#top">Back to Top</a></div>
+	</div>
+	<script>
+	/* JQuery for smooth scrolling (easier than native JS code)
+	Found at https://stackoverflow.com/questions/7717527/smooth-scrolling-when-clicking-an-anchor-link */
+
+	$("a[href^='#']").click(function (event) {
+		event.preventDefault();
+		let target = $(this.hash);
+		$('html, body').animate({ scrollTop: target.offset().top }, 300);
+
+		// Make this more accessible by setting target.focus();
+		// See https://css-tricks.com/smooth-scrolling-accessibility/ for details
+
+		if (target.is(":focus")) { // Checking if the target was focused
+			return false;
+		} else {
+			target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+			target.focus(); // Setting focus
+		};
+
+	});
+
+	// navigation code
+	$("#close").click(function () {
+		$("#navpanel").animate({ top: '-100' }, "slow");
+		$("#close").toggle();
+		$("#open").toggle();
+	});
+
+	$("#open").click(function () {
+		$("#navpanel").animate({ top: '0px' }, "slow");
+		$("#close").toggle();
+		$("#open").toggle();
+	});
+
+	</script>
+
+</body>
+
+</html>
