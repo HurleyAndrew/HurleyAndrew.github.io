@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+
+    <script src="colorBox.js"></script>
+    <script src="CCapture.all.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+
+</head>
+<body>
+    <div id="wrapper">
+        <div class="topBarOptions">
+            <div class="frameRateContainer">
+                Frame Rate
+                <select class="frameRateBtn" id="frameRateBtn">
+                    <option value=15>15</option>
+                    <option value="24">24</option>
+                    <option value=30>30</option>
+                    <option value=60>60</option>
+
+                </select>
+            </div>
+            <div class="topOptionsRightSide">
+                <div class="switchModeBtn">Switch to Draw Mode</div>
+
+                <div class="timelineDirectionToggle">
+                    <div class="directionForward directionHighlighted">Forward</div>
+                    <div class="directionBackward">Backward</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="canvasDiv"></div>
+
+        <div class="frameEditorRow">
+            <div class="frameEditorLeft">
+                <div class="deleteFrameBtn" id="deleteBtn"></div>
+                <div class="addFrameBtn" id="addBtn"></div>
+            </div>
+            <div class="frameEditorRight">
+                <div class="captureBtn" id="captureBtn">Capture Frame</div>
+                <div class="trashCanBtn"></div>
+                <!-- <div class="colorPickerBtn"></div> -->
+                <!-- <div id="colorPicker" type="color" class="colorPickerBtn"></div> -->
+                <input id="colorPicker" type="color" value="#000000" />
+            </div>
+        </div>
+
+        <div class="timeIndicatorsContainer">
+            <div class="timeIndicator">0:00</div>
+            <div class="timeIndicator">0:50</div>
+            <div class="timeIndicator">1:00</div>
+        </div>
+        <div class="timelineContainer">
+            <div class="frameObject">
+                <div class="frameSlide"></div>
+                <div class="frameSeperator"></div>
+            </div>
+            <div class="frameObject">
+                <div class="frameSlide"></div>
+                <div class="frameSeperator"></div>
+            </div>
+            <div class="frameObject">
+                <div class="frameSlide"></div>
+                <div class="frameSeperator"></div>
+            </div>
+            <div class="frameObject">
+                <div class="frameSlide"></div>
+                <div class="frameSeperator"></div>
+            </div>
+            <div class="frameObject">
+                <div class="frameSlide"></div>
+                <div class="frameSeperator"></div>
+            </div>
+            <div class="frameObject">
+                <div class="frameSlide"></div>
+                <div class="frameSeperator"></div>
+            </div>
+            <div class="frameObject">
+                <div class="frameSlide"></div>
+                <div class="frameSeperator"></div>
+            </div>
+            <div class="frameObject">
+                <div class="frameSlide"></div>
+                <div class="frameSeperator"></div>
+            </div>
+            <div class="frameObject">
+                <div class="frameSlide"></div>
+                <div class="frameSeperator"></div>
+            </div>
+        </div>
+
+        <!-- <input id="colorPicker" type="color" class="colorPickerBtn" /> -->
+
+        <div class="bottomOptionBarContainer">
+            <div class="playpauseBtn"></div>
+            <div class="exportBtn" id="exportBtn"></div>
+        </div>
+
+
+    </div>
+</body>
+<script src="main.js"></script>
+
+</html>

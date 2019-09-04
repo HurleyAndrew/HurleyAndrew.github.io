@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
+html,
+body {
+  /* background: linear-gradient(123.51deg, #181d30 0%, #0a0c14 101.74%); */
+  height: 100%;
+  background-color: #0f121e;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  margin: 0;
+  display: flex;
+
+  /* This centers our sketch horizontally. */
+  justify-content: center;
+
+  /* This centers our sketch vertically. */
+  align-items: center;
+}
+#canvasDiv {
+  /* height: 1020px;
+  width: 360px; */
+}
+.wrapper {
+  max-width: 1064px;
+}
+input[type="color"] {
+  width: 24px;
+  height: 24px;
+  margin-left: 12px;
+  background-image: url("assets/colorPicker.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.colorPickerBtn {
+  width: 24px;
+  height: 24px;
+  margin-left: 12px;
+  background-image: url("assets/colorPicker.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.captureBtn {
+  width: 145px;
+  height: 32px;
+  border-radius: 8px;
+  background-color: #252a3c;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 32px;
+  color: #ffffff;
+  text-align: center;
+}
+.switchModeBtn {
+  width: 192px;
+  height: 32px;
+  border-radius: 8px;
+  background-color: #252a3c;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 32px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.deleteFrameBtn {
+  width: 36px;
+  height: 36px;
+  background-image: url("assets/deleteFrame.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 12px;
+  transition: 0.125s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.addFrameBtn {
+  width: 36px;
+  height: 36px;
+  background-image: url("assets/addFrame.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: 0.125s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.deleteFrameBtn:hover {
+  background-image: url("assets/deleteFrameHover.svg");
+  background-repeat: no-repeat;
+}
+.addFrameBtn:hover {
+  background-image: url("assets/addFrameHover.svg");
+  background-repeat: no-repeat;
+}
+
+.timelineDirectionToggle {
+  width: 216px;
+  height: 32px;
+  background: #252a3c;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  color: white;
+  justify-content: space-between;
+  margin-left: 12px;
+}
+.directionForward {
+  width: 100px;
+  height: 32px;
+  line-height: 31px;
+  border-radius: 8px;
+}
+.directionBackward {
+  width: 108px;
+  height: 32px;
+  line-height: 31px;
+  border-radius: 8px;
+}
+.directionHighlighted {
+  width: 108px;
+  height: 32px;
+  background: #2d4ab0;
+  border-radius: 8px;
+}
+.trashCanBtn {
+  width: 36px;
+  height: 36px;
+  background-image: url("assets/trashCan.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 12px;
+  transition: 0.125s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.trashCanBtn:hover {
+  background-image: url("assets/trashCanHover.svg");
+  background-repeat: no-repeat;
+}
+.exportBtn {
+  width: 110px;
+  height: 32px;
+  background-image: url("assets/exportBtn.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.playpauseBtn {
+  width: 51px;
+  height: 32px;
+  background-image: url("assets/playBtn.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.playpauseBtn:hover {
+  background-image: url("assets/pauseBtn.svg");
+  background-repeat: no-repeat;
+}
+.frameEditorRow {
+  /* width: 1024px; */
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.frameEditorLeft {
+  display: flex;
+  flex-direction: row;
+}
+.frameEditorRight {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* Timeline CSS */
+.timelineContainer {
+  width: 1024px;
+  height: 160px;
+  background: #1b1f2d;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  overflow-x: scroll;
+}
+.timelineContainer::-webkit-scrollbar {
+  background-color: #252a3c;
+  height: 10px;
+  border-radius: 8px;
+}
+.timelineContainer::-webkit-scrollbar-thumb {
+  background: #535e85;
+  height: 10px;
+  border-radius: 8px;
+}
+.frameObject {
+  display: flex;
+  flex-direction: row;
+}
+.frameSlide {
+  width: 106px;
+  height: 106px;
+  background: #252a3c;
+  border-radius: 8px;
+  margin-right: 15px;
+}
+.frameSeperator {
+  height: 106px;
+  margin-right: 15px;
+  width: 2px;
+  background-image: url("assets/seperatorLine.svg");
+}
+
+/* Time Indicator for Timeline */
+.timeIndicatorsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.timeIndicator {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  /* identical to box height */
+
+  color: #464a5c;
+}
+
+/* Frame Rate Button */
+.frameRateContainer {
+  font-size: 12px;
+  line-height: 18px;
+  /* identical to box height */
+  text-align: left;
+  color: #ffffff;
+}
+.frameRateBtn {
+  font-size: 14px;
+  line-height: 21px;
+  /* identical to box height */
+  width: 54px;
+  height: 32px;
+  background: #252a3c;
+  border-radius: 8px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 31px;
+  display: flex;
+  margin-top: 10px;
+}
+
+/* topBarOptions */
+.topBarOptions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.topOptionsRightSide {
+  display: flex;
+  flex-direction: row;
+}
+/* bottom option bar container */
+.bottomOptionBarContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
