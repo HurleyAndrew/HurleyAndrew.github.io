@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Sprint 2 - Prototype</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/sprint_2.css">
+
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="parrotIcon"></div>
+            <div class="parrotApp">Parrot App</div>
+        </div>
+        <div class="visualizerContainer">
+            <div class="voiceOptions">
+                <div class="characterOption">
+                    <div class="characterImage trollImage" id="troll"></div> troll
+                </div>
+                <div class="characterOption">
+                    <div class="characterImage robotImage" id="robot"></div> robot
+                </div>
+                <div class="characterOption">
+                    <div class="characterImage monsterImage" id="monster"></div> monster
+                </div>
+            </div>
+
+            <div class="waveformContainer">click to start recording</div>
+            
+            <div class="controls">
+                <div class="button playBtn" id="playBtn"></div>
+                <div class="button recordBtn" id="recordBtn"></div>
+                <div class="button deleteBtn" id="deleteBtn"></div>
+            </div>
+
+            <div class="audioClips">
+
+            </div>
+        </div>
+        <canvas id='visualizer'></canvas>
+
+        <audio></audio>
+    </div>
+</body>
+
+<script src='./sprint_2.js'></script>
+
+</html>
