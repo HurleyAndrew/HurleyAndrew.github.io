@@ -1,472 +1,491 @@
 * {
-	box-sizing: border-box;
-	font-family: 'Didot', 'Arapey', Times, serif;
+  box-sizing: border-box;
+  font-family: "Didot", "Arapey", Times, serif;
 }
 /* wrapper used mostly in the story sections for text placement and scroll icon placement */
 .wrapper {
-	height: 100vh;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-direction: column;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
 }
 
 body {
-	margin: 0;
-	overflow: hidden;
-	/* user select none makes it so the user cannot
+  margin: 0;
+  overflow: hidden;
+  /* user select none makes it so the user cannot
 	highlight things and cause issues with
 	the interactivity */
-	user-select: none;
-	-moz-user-select:none;
-	transition: 1s ease-in-out;
+  user-select: none;
+  -moz-user-select: none;
+  transition: 1s ease-in-out;
 }
 /* for fading between the light and dark sections of the story */
 .blackFade {
-	background-color: black;
+  background-color: black;
 }
 /* for the dark sections of the story we need the text to turn white on the black background */
 .whiteText {
-	color: white;
+  color: white;
 }
 /* set up of multiple fades for different use cases, they go sequantially and increase in transition delay duration */
-#fade1, #fade2, #fade3, #fade4, #fade5, #fade6 {
-	opacity: 1;
-	/* custom cubic bezier speed curve made with http://cubic-bezier.com */
-	transition: 1s all cubic-bezier(0.400, 0.015, 0.530, 1.015);
+#fade1,
+#fade2,
+#fade3,
+#fade4,
+#fade5,
+#fade6 {
+  opacity: 1;
+  /* custom cubic bezier speed curve made with http://cubic-bezier.com */
+  transition: 1s all cubic-bezier(0.4, 0.015, 0.53, 1.015);
 }
 
 #fade2 {
-	transition-delay: .2s;
+  transition-delay: 0.2s;
 }
 
 #fade3 {
-	transition-delay: .5s;
+  transition-delay: 0.5s;
 }
 
 #fade4 {
-	transition-delay: .8s;
+  transition-delay: 0.8s;
 }
 
 #fade5 {
-	transition-delay: 1s;
+  transition-delay: 1s;
 }
 
 #fade6 {
-	transition-delay: 2.5s;
+  transition-delay: 2.5s;
 }
 /* what the fades turn into from full opacity to none */
-#fade1.fade, #fade2.fade, #fade3.fade, #fade4.fade, #fade5.fade, #fade6.fade {
-	opacity: 0;
-	transition: none;
+#fade1.fade,
+#fade2.fade,
+#fade3.fade,
+#fade4.fade,
+#fade5.fade,
+#fade6.fade {
+  opacity: 0;
+  transition: none;
 }
 /* styling for the title "three little pigs" */
 h1 {
-	text-shadow: 0px 0px 9px grey;
-	letter-spacing: .1rem;
-	font-weight: 100;
-	font-size: 3rem;
-	margin: 0px 40px 60px 40px;
-	text-align: center;
+  text-shadow: 0px 0px 9px grey;
+  letter-spacing: 0.1rem;
+  font-weight: 100;
+  font-size: 3rem;
+  margin: 0px 40px 60px 40px;
+  text-align: center;
 }
 
 /* nav styling */
 nav {
-	display: flex;
-	margin-bottom: 40px;
-	max-width: 500px;
-	width: 80%;
-	justify-content: space-around;
+  display: flex;
+  margin-bottom: 40px;
+  max-width: 500px;
+  width: 80%;
+  justify-content: space-around;
 }
 /* css reset for the p tag */
 p {
-	margin: 0;
+  margin: 0;
 }
 /* css reset for the a tag */
 a {
-	text-decoration: none;
-	color: black;
-	transition: .3s;
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
 }
 /* placement for our start button */
-.beginButton{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+.beginButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* hover affordance animation */
-.begin:hover img{
-	transform: scale(1.1);
+.begin:hover img {
+  transform: scale(1.1);
 }
 
-.begin:hover div{
-	text-shadow: 0px 0px 5px #666;
-
+.begin:hover div {
+  text-shadow: 0px 0px 5px #666;
 }
 /* link affordance animation */
 a:hover {
-	text-shadow: 0px 0px 5px #666;
-	position: relative;
+  text-shadow: 0px 0px 5px #666;
+  position: relative;
 }
 /* images for the links hover*/
 #pigOne:before {
-	/* content is used to fill the object with images */
-	content: url(imgs/hay.svg);
-	opacity: 0;
-	position: absolute;
-	transform: translate(-10px, -10px);
-	/* transition for only opacity and transform */
-	transition: opacity .3s, transform .3s;
-	pointer-events: none;
+  /* content is used to fill the object with images */
+  content: url(imgs/hay.svg);
+  opacity: 0;
+  position: absolute;
+  transform: translate(-10px, -10px);
+  /* transition for only opacity and transform */
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
 }
 /* the animation that brings the image into view */
 #pigOne:hover:before {
-	opacity: 1;
-	position: absolute;
-	transform: translate(-10px, -50px);
+  opacity: 1;
+  position: absolute;
+  transform: translate(-10px, -50px);
 }
 
 #pigTwo:before {
-	content: url(imgs/stick.svg);
-	opacity: 0;
-	position: absolute;
-	transform: translate(-5px, -10px);
-	transition: opacity .3s, transform .3s;
-	pointer-events: none;
+  content: url(imgs/stick.svg);
+  opacity: 0;
+  position: absolute;
+  transform: translate(-5px, -10px);
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
 }
 
 #pigTwo:hover:before {
-	opacity: 1;
-	position: absolute;
-	transform: translate(-5px, -50px);
+  opacity: 1;
+  position: absolute;
+  transform: translate(-5px, -50px);
 }
 
 #pigThree:before {
-	content: url(imgs/brick.svg);
-	opacity: 0;
-	position: absolute;
-	transform: translate(-3px, -10px);
-	transition: opacity .3s, transform .3s;
-	pointer-events: none;
+  content: url(imgs/brick.svg);
+  opacity: 0;
+  position: absolute;
+  transform: translate(-3px, -10px);
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
 }
 
 #pigThree:hover:before {
-	opacity: 1;
-	position: absolute;
-	transform: translate(-3px, -50px);
+  opacity: 1;
+  position: absolute;
+  transform: translate(-3px, -50px);
 }
 
 /* play button transitions */
 .playButton {
-	transition: .3s;
+  transition: 0.3s;
 }
 
 .playButton:hover {
-	transform: scale(1.1);
+  transform: scale(1.1);
 }
 /* setting a "variable" class for the use of gray */
 .gray {
-	color: gray;
+  color: gray;
 }
 
 /* scene_intro */
 /* story text positioning */
-.sceneIntroContainer{
-	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+.sceneIntroContainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 /* story text formatting */
-.storyPara{
-	min-width: 420px;
-	line-height: 200%;
-	/* text-shadow: 0px 0px 5px #666; */
-	font-weight: 100;
-	font-size: 1.2rem;
-	text-align: center;
-	font-family: "PT Serif", "Didot", serif;
-	transform: translateY(-90px);
-	transition: 2s ease-in !important;
+.storyPara {
+  min-width: 420px;
+  line-height: 200%;
+  /* text-shadow: 0px 0px 5px #666; */
+  font-weight: 100;
+  font-size: 1.2rem;
+  text-align: center;
+  font-family: "PT Serif", "Didot", serif;
+  /* transform: translateY(-90px); */
+  transition: 2s ease-in !important;
 }
 
-.storyFadeOut{
-	transform: translateY(0px);
-	transition: none;
+.storyFadeOut {
+  /* transform: translateY(0px); */
+  transition: none;
 }
 
-.scrollIcon{
-	margin-top: 86px;
-	content: url(imgs/scrollicon.svg);
-	width: 48px;
-	height: 48px;
+.scrollIcon {
+  margin-top: 86px;
+  content: url(imgs/scrollicon.svg);
+  width: 48px;
+  height: 48px;
 }
 
 .scrollIconBlack {
-	margin-top: 86px;
-	content: url(imgs/whitescroll.svg);
-	width: 48px;
-	height: 48px;
+  margin-top: 86px;
+  content: url(imgs/whitescroll.svg);
+  width: 48px;
+  height: 48px;
 }
 
 /* Radar Animation */
 /* the container for the beam */
-.line{
-	transform: scale(-.5);
-	position: relative;
-
+.line {
+  transform: scale(-0.5);
+  position: relative;
 }
 /* the visible beam */
-.beam{
-	position: relative;
-	width: 100px;
-	height: 100px;
-	background-color: rgba(0, 0, 0, 0);
-	border: 2px solid rgba(253, 229, 107, 0.5);
-	border-radius: 100%;
-	box-sizing: border-box;
-	/* centering axis of transformation */
-	transform-origin: center center;
-	box-shadow: 0px 0px 5px #FDE56B;
+.beam {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid rgba(253, 229, 107, 0.5);
+  border-radius: 100%;
+  box-sizing: border-box;
+  /* centering axis of transformation */
+  transform-origin: center center;
+  box-shadow: 0px 0px 5px #fde56b;
 }
 
 /* boing animation */
 /* animation used when picking up and placing objects */
 .boing {
-	animation: boing .4s ease-in-out;
+  animation: boing 0.4s ease-in-out;
 }
 /* keyframes used to fine tune the look of the boing */
 @keyframes boing {
-	0% {transform: scale(1);}
-	33% {transform: scale(1.1);}
-	66% {transform: scale(.9);}
-	100% {transform: scale(1);}
+  0% {
+    transform: scale(1);
+  }
+  33% {
+    transform: scale(1.1);
+  }
+  66% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* scene all pigs */
 /* wrapper for placing objects */
-.allPigsWrapper{
-	display: flex;
-	justify-content: center;
-	flex-direction: row;
+.allPigsWrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
 /* positioning for the group of objects */
-.allPigMatGroups{
-	display: flex;
-	justify-content:space-between;
-	width: 40vw;
-	height: 40vh;
-	flex-direction: row;
+.allPigMatGroups {
+  display: flex;
+  justify-content: space-between;
+  width: 40vw;
+  height: 40vh;
+  flex-direction: row;
 }
 /* sizing for the image */
-.pig img{
-	height: 90px;
-	width:90px;
+.pig img {
+  height: 90px;
+  width: 90px;
 }
 /* placement of individual images */
-.pigMat{
-	display: flex;
-	justify-content:space-between;
-	flex-direction: column;
+.pigMat {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 /* material sizing with pointer events none so the user cannot access the object and cause errors */
-.material img{
-	height: 90px;
-	width:90px;
-	pointer-events: none;
+.material img {
+  height: 90px;
+  width: 90px;
+  pointer-events: none;
 }
 /* placing the material behind for visuals and functionality */
 .material {
-	z-index: -1;
+  z-index: -1;
 }
 /* placing the items infront of the others for visual aesthetics */
-#hay1, #stick1,  #brick1 {
-	z-index: 2 !important;
+#hay1,
+#stick1,
+#brick1 {
+  z-index: 2 !important;
 }
 
-.pigsAndMaterials{
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.pigsAndMaterials {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* hints for the user to introduce them to the game/story mechanics */
-.instructionText{
-	position: absolute;
-	text-align: center;
-	bottom: 10%;
-	line-height: 200%;
-	/* text-shadow: 0px 0px 5px #666; */
-	font-weight: 100;
-	font-size: 1rem;
-	font-family: "PT Serif", "Didot", serif;
+.instructionText {
+  position: absolute;
+  text-align: center;
+  bottom: 10%;
+  line-height: 200%;
+  /* text-shadow: 0px 0px 5px #666; */
+  font-weight: 100;
+  font-size: 1rem;
+  font-family: "PT Serif", "Didot", serif;
 }
 
 /* scene_pig1house */
 /* positioning for the goal or gray materials that the user drag and drops into  */
-.grayMatCenter{
-	display: flex;
-	height: 100vh;
-	justify-content: center;
-	align-items: center;
+.grayMatCenter {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 /* individual placing */
-.grayMatGroup{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content:space-between;
-	height: auto;
-	pointer-events: none;
-
+.grayMatGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  pointer-events: none;
 }
 /* positioning for the strewn about objects */
-.normalPos1{
-	position: absolute;
-	left: 25%;
-	top: 45%;
+.normalPos1 {
+  position: absolute;
+  left: 25%;
+  top: 45%;
 }
 
-.normalPos2{
-	position: absolute;
-	left: 70%;
-	top: 15%;
+.normalPos2 {
+  position: absolute;
+  left: 70%;
+  top: 15%;
 }
 
-.normalPos3{
-	position: absolute;
-	left: 65%;
-	top: 65%;
+.normalPos3 {
+  position: absolute;
+  left: 65%;
+  top: 65%;
 }
 /* pig and wolf characters placement */
-.pigChar{
-	position: absolute;
-	right: 30%;
-	z-index: -1;
+.pigChar {
+  position: absolute;
+  right: 30%;
+  z-index: -1;
 }
 
 .wolfChar {
-	position: absolute;
-	left: 30%;
-	transform: translate(0,0);
+  position: absolute;
+  left: 30%;
+  transform: translate(0, 0);
 }
 /* pig and wolf sizing */
-.pigChar img, .wolfChar img{
-	height: 100px;
-	width: 100px;
+.pigChar img,
+.wolfChar img {
+  height: 100px;
+  width: 100px;
 }
 /* animation css for the scattering*/
-.grayMat{
-	position: relative;
-	transform: translate(0,0);
-	transition: 1.5s ease-out;
+.grayMat {
+  position: relative;
+  transform: translate(0, 0);
+  transition: 1.5s ease-out;
 }
 /* individual places for the objects to scatter to */
 .staticMat1Transition {
-	position: relative;
-	transform: translate(5vw,-10vh) rotate(20deg);
+  position: relative;
+  transform: translate(5vw, -10vh) rotate(20deg);
 }
 
 .staticMat2Transition {
-	position: relative;
-	transform: rotate(-.45turn);
-	transform: translate(30vw,-1vh) rotate(-75deg);
+  position: relative;
+  transform: rotate(-0.45turn);
+  transform: translate(30vw, -1vh) rotate(-75deg);
 }
 
 .staticMat3Transition {
-	position: relative;
-	transform: rotate(.3turn);
-	transform: translate(20vw,10vh) rotate(45deg);
+  position: relative;
+  transform: rotate(0.3turn);
+  transform: translate(20vw, 10vh) rotate(45deg);
 }
 /* wolf scatter animation css */
 .wolfScatter {
-	animation: wolfFrames .6s ease-out;
+  animation: wolfFrames 0.6s ease-out;
 }
 
 @keyframes wolfFrames {
-	0% {transform: translate(0vw,0vh) rotate(0deg);}
-	100% {transform: translate(-30vw,0vh) rotate(120deg)}
+  0% {
+    transform: translate(0vw, 0vh) rotate(0deg);
+  }
+  100% {
+    transform: translate(-30vw, 0vh) rotate(120deg);
+  }
 }
 #newWolf {
-	position: absolute;
-	transform: translate(-30vw,0vh) rotate(120deg)
+  position: absolute;
+  transform: translate(-30vw, 0vh) rotate(120deg);
 }
-.wolfScatterTransition{
-	position: absolute;
-	transform: translate(0vw,0vh) rotate(0deg);
-	/* transition: 1.5s transform ease-out; */
+.wolfScatterTransition {
+  position: absolute;
+  transform: translate(0vw, 0vh) rotate(0deg);
+  /* transition: 1.5s transform ease-out; */
 }
-
-
 
 /* misc */
 /* added on the fly to prevent certain objects from being interacted with at certain times */
-.pointerNone{
-	pointer-events:none;
+.pointerNone {
+  pointer-events: none;
 }
-
 
 /* documentation css */
 
 .docWrapper {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
 }
 
 /* different p tag styles for documentation */
 .docP {
-	font-family: "PT Serif", "Didot", serif;
-	line-height: 25px;
-	max-width: 700px;
-	width: 70vw;
-	margin-top: 15px;
-	text-align: left;
+  font-family: "PT Serif", "Didot", serif;
+  line-height: 25px;
+  max-width: 700px;
+  width: 70vw;
+  margin-top: 15px;
+  text-align: left;
 }
 
 .docP a {
-	font-family: "PT Serif", "Didot", serif;
-	color: red;
+  font-family: "PT Serif", "Didot", serif;
+  color: red;
 }
 
 h2 {
-	margin-top: 80px;
-	margin-bottom: 20px;
-	text-align: left;
-	width: 70vw;
-	max-width: 700px;
-	text-shadow: 0px 0px 5px #999;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  text-align: left;
+  width: 70vw;
+  max-width: 700px;
+  text-shadow: 0px 0px 5px #999;
 }
 
 /* margin above first header for spacing */
 h2:first-of-type {
-	margin-top: 30px;
+  margin-top: 30px;
 }
 
 /* since the body is set to hide overflow for the story, this one needs to be changed to scroll */
 .overflow {
-	overflow: scroll !important;
+  overflow: scroll !important;
 }
 
 .back {
-	align-self: flex-start;
-	margin: 30px 0px 0px 30px;
-	position: fixed;
+  align-self: flex-start;
+  margin: 30px 0px 0px 30px;
+  position: fixed;
 }
 
 /*fixing a link hovering glitch */
 .back:hover {
-	position: fixed;
+  position: fixed;
 }
 
 .doch1 {
-	margin-top: 100px;
+  margin-top: 100px;
 }
 
 .spacing {
-	height: 150px;
+  height: 150px;
 }
